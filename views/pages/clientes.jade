@@ -71,19 +71,20 @@
 <button class="w3-btn w3-blue-grey" onclick="criarCliente()">Cadastrar</button>
 </form>
 </br></br>
+<button class="w3-btn w3-blue-grey" onclick="deletar()"> Delete</button>
+<button class="w3-btn w3-blue-grey" onclick="modify()"> Modify</button>
 <table class="w3-table-all w3-card-4">
 <thead>
 <tr>
+<th></th>
 <th>Nome</th>
 <th>Telefone</th>
 
 
 </thead>
-<tbody id="tabelaCliente"></tbody>
-</table>
+<tbody id="tabelaCliente" ></tbody>
+</table >
 </div>
-
-
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
@@ -98,8 +99,6 @@
 
 <!-- End page content -->
 </div>
-
-
 
 </body>
 </html>

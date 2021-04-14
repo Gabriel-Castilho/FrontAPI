@@ -7,9 +7,8 @@ router.get("/cliente",(req,res)=>{
 })
 
 router.post("/cliente",(req,res)=>{
-    res.render("pages/clientes")
+   let{nome_clientes, telefone}=req.body;
+   //let dados = [nome_clientes, telefone];
 })
-
-
 
 module.exports=router;
