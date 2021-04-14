@@ -39,7 +39,7 @@ function criarCliente() {
         telefone: telefoneInput.value
     }
     api.post("/cliente",dados).then(res=>{
-        alert("Cadastro efetuado com sucesso")
+        alert("Cadastro efetuado!")
             window.location.reload(true)
     }).catch(err=>{
         console.log(err)
