@@ -37,10 +37,17 @@ function criarCliente() {
         nome_clientes: nameInput.value,
         telefone: telefoneInput.value
     }
+<<<<<<< HEAD
     api.post("/cliente", dados).then(res => {
         alert("Cadastro efetuado com sucesso")
         window.location.reload(true)
     }).catch(err => {
+=======
+    api.post("/cliente",dados).then(res=>{
+        alert("Cadastro efetuado!")
+            window.location.reload(true)
+    }).catch(err=>{
+>>>>>>> c23f30b8e10e7b7036df79b548dc3aa608a76d1e
         console.log(err)
     })
 

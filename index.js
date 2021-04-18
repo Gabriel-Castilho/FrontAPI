@@ -15,11 +15,12 @@ app.use(bodyParser.json())
 
 app.use("/",clienteController)
 
-/*
+
 app.get("/", function(req, res){
     res.sendFile(__dirname + "/public/pages/index.html");
 })
 
+/*
 app.get("/clientes", function(req, res){
     res.sendFile(__dirname + "/public/pages/clientes.html");
 })
