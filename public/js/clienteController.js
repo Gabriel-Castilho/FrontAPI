@@ -12,6 +12,39 @@ api.get("/cliente").then(res => {
 
 
 function criarTabela(clientes) {
+    var allRadios = document.getElementsByName('teste');
+    var booRadio;
+    var x = 0;
+    for (x = 0; x < allRadios.length; x++) {
+
+    allRadios[x].onclick = function() {
+    if (booRadio == this) {
+      this.checked = false;
+      booRadio = null;
+    } else {
+      booRadio = this;
+    }
+  };
+}
+    var table = document.getElementById("tabelaCliente")
+
+    for (var i = 0; i < clientes.length; i++) {
+
+        //Sintaxe do qual insere o checkbox e oculta o id da tabela.
+
+        var row = `<tr> 
+                        <td><input type="radio" name="teste" id="id-cliente" value=${clientes[i].id_clientes}></input></td> 
+                        <td>${clientes[i].nome_clientes}</td>
+                        <td>${clientes[i].telefone}</td>  
+                    </tr>`;
+        table.innerHTML += row
+    }
+   
+}
+
+
+/*
+function criarTabela(clientes) {
     var table = document.getElementById("tabelaCliente")
     for (var i = 0; i < clientes.length; i++) {
 
@@ -29,6 +62,8 @@ function criarTabela(clientes) {
     console.log(id)
 
 }
+
+*/
 function criarCliente() {
     var nameInput = document.getElementById("nomeCliente")
     var telefoneInput = document.getElementById("telefoneCliente")
