@@ -11,4 +11,9 @@ router.post("/cliente",(req,res)=>{
    //let dados = [nome_clientes, telefone];
 })
 
+router.delete("/cliente/:id",(req,res)=>{
+        var id_clientes = parseInt(req.params.id)      
+        
+})
+ 
 module.exports=router;
